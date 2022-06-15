@@ -4,9 +4,14 @@ import Book from "./components/Book";
 
 
 function App() {
+    const firstBook = {
+        name: "book name",
+        title: "book title"
+    }
+
   return (
     <div className="App">
-      <Book/>
+      <Book name = {firstBook.name} title = {firstBook.title}/>
     </div>
   );
 }
