@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-const Book = ({name, title}) => {
+const Book = ({name, author, children}) => {
 
     return (
         <div>
             {name}
-            <p>{title}</p>
+            <p>{author}</p>
+            {children}
         </div>
     )
 }
