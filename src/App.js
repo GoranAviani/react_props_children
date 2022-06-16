@@ -13,12 +13,11 @@ function App() {
         name: "book name",
         author: "book author"
     }
-
-    const {someState, setSomeState} = useState('')
+    const someVar = true
 
   return (
-    <div className="App">
-      <Book name = {firstBook.name} author = {firstBook.author}><Description/></Book>
+    <ThemeContext.Provider value={{color: "blue"}}  className="App">
+      <Book name = {firstBook.name} author = {firstBook.author}>{someVar? <Description/>: "nothing to show"}</Book>
       <Book name = {firstBook.name} author = {firstBook.author}></Book>
     </div>
   );
