@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Book name = {firstBook.name} author = {firstBook.author}>This is a child</Book>
+      <Book name = {firstBook.name} author = {firstBook.author}><Description/></Book>
       <Book name = {firstBook.name} author = {firstBook.author}></Book>
     </div>
   );
