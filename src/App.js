@@ -1,20 +1,27 @@
-import './App.css';
-import Book from "./components/Book";
+import React from 'react'
 
+import './App.css';
+
+import Book from "./components/Book";
+import Description from "./components/Description"
+import { createContext, useContext } from "react";
+
+const ThemeContext = createContext({color: "red"});
 
 function App() {
     const firstBook = {
         name: "book name",
         author: "book author"
     }
+    const someVar = true
 
   return (
-    <div className="App">
-      <Book name = {firstBook.name} author = {firstBook.author}>This is a child</Book>
+    <ThemeContext.Provider value={{color: "blue"}}  className="App">
+      <Book name = {firstBook.name} author = {firstBook.author}>{someVar? <Description/>: "nothing to show"}</Book>
       <Book name = {firstBook.name} author = {firstBook.author}></Book>
-
-    </div>
+    </ThemeContext.Provider>
   );
 }
 
+export const useTheme = () => useContext(ThemeContext)
 export default App;
