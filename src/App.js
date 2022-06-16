@@ -19,7 +19,7 @@ function App() {
     <ThemeContext.Provider value={{color: "blue"}}  className="App">
       <Book name = {firstBook.name} author = {firstBook.author}>{someVar? <Description/>: "nothing to show"}</Book>
       <Book name = {firstBook.name} author = {firstBook.author}></Book>
-    </div>
+    </ThemeContext.Provider>
   );
 }
 
