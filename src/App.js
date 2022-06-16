@@ -4,7 +4,9 @@ import './App.css';
 
 import Book from "./components/Book";
 import Description from "./components/Description"
-import {useState} from "react";
+import { createContext, useContext } from "react";
+
+const ThemeContext = createContext({color: "red"});
 
 function App() {
     const firstBook = {
@@ -22,4 +24,5 @@ function App() {
   );
 }
 
+export const useTheme = () => useContext(ThemeContext)
 export default App;
